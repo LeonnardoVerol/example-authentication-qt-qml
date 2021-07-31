@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>UI/Main.qml</file>
+        <file>UI/Views/Login/Login.qml</file>
+        <file>UI/Views/Login/Components/Input.qml</file>
+        <file>UI/Views/Login/Styles/Form.qml</file>
+        <file>UI/Views/Login/Styles/Container.qml</file>
+        <file>UI/Views/Login/Styles/Title.qml</file>
+        <file>UI/Views/Home/Home.qml</file>
+        <file>UI/Navigation/Navigation.qml</file>
+    </qresource>
+</RCC>
