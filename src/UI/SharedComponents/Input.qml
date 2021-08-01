@@ -3,19 +3,20 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 
 ColumnLayout {
+    // Shortcuts
     property alias placeholderText: textField.placeholderText
-    property alias text: label.text
-    property alias labelColor: label.color
-    property alias inputColor: textField.color
-    property alias inputBackground: textFieldBackground.color
     property alias echoMode: textField.echoMode
+
+    // Direct Access
+    property alias label: label
+    property alias input: textField
+    property alias background: background
 
     spacing: 10
 
-
     Label {
         id: label
-        text: "Label"
+        text: qsTr("Label")
         font.pointSize: 14
         color: "#CBCBCB"
     }
@@ -23,25 +24,16 @@ ColumnLayout {
     TextField  {
         id: textField
         selectByMouse: true
-        placeholderText: "Placeholder Text"
+        placeholderText: qsTr("Placeholder Text")
         Layout.fillWidth: true
         padding: 16
         font.pointSize: 16
         color: "#f4ede8"
 
         background: Rectangle {
-            id: textFieldBackground
+            id: background
             radius: 6
-            //color: "#222921"
             color: "#181A1B"
-//                    border.color: "#144d0b"
-            //border.width: 2
         }
     }
 }
-
-/*##^##
-Designer {
-    D{i:0;autoSize:true;height:480;width:640}
-}
-##^##*/

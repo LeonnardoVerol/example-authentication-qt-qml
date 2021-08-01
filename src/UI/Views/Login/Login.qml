@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
-import "Components"
+import "../../SharedComponents"
 import "Styles"
 
 Page {
@@ -9,18 +9,16 @@ Page {
     anchors.fill: parent
 
     Container {
-        Title {
-            text: qsTr("Log In")
-        }
+        Title { text: qsTr("Log In") }
 
         Form {
             Input {
-                text: qsTr("Username")
+                label.text: qsTr("Username")
                 placeholderText: qsTr("Username")
             }
 
             Input {
-                text: qsTr("Password")
+                label.text: qsTr("Password")
                 placeholderText: qsTr("Password")
                 echoMode: TextInput.Password
             }
