@@ -8,5 +8,10 @@
         <file>UI/Views/Home/Home.qml</file>
         <file>UI/Navigation/Navigation.qml</file>
         <file>UI/SharedComponents/Input.qml</file>
+        <file>UI/SharedComponents/FormButton.qml</file>
+        <file>UI/Views/Register/Register.qml</file>
+        <file>UI/Views/Register/Styles/Form.qml</file>
+        <file>UI/Views/Register/Styles/Container.qml</file>
+        <file>UI/Views/Register/Styles/Title.qml</file>
     </qresource>
 </RCC>
