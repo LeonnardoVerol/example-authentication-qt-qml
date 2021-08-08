@@ -10,7 +10,6 @@ ColumnLayout {
     // Direct Access
     property alias label: label
     property alias input: textField
-    property alias background: background
 
     spacing: 10
 
@@ -30,10 +29,14 @@ ColumnLayout {
         font.pointSize: 16
         color: "#f4ede8"
 
+        property color backgroundColor: "#181A1B"
+        property color backgroundActiveBorderColor: "#ff9000"
+
         background: Rectangle {
-            id: background
             radius: 6
-            color: "#181A1B"
+            color: textField.backgroundColor
+            border.width: textField.focus ? 1 : 0
+            border.color: textField.backgroundActiveBorderColor
         }
     }
 }
