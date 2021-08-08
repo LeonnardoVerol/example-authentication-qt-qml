@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
+import Store.Navigation 1.0
 import "../../SharedComponents"
 import "Styles"
 
@@ -45,6 +46,8 @@ Page {
                 textColor: "#ff9000"
                 backgroundHoverBorderColor: "#ff9000"
                 Layout.fillWidth: true
+
+                onClicked: Navigation.goBack();
             }
         }
     }

@@ -16,6 +16,8 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
 
+    qmlRegisterSingletonType(QUrl("qrc:/UI/Navigation/Store/NavigationStore.qml"), "Store.Navigation", 1, 0, "Navigation");
+
     engine.load(url);
 
     return app.exec();

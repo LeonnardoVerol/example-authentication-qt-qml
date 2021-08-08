@@ -5,8 +5,8 @@ import "Navigation"
 Window {
     minimumWidth: 1024
     width: 1024
-    minimumHeight: 768
-    height: 768
+    minimumHeight: 960
+    height: 960
     color: "#2E2F30"
 
     visible: true
