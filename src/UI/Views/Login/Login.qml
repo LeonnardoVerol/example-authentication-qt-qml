@@ -4,9 +4,9 @@ import QtQuick.Layouts 1.12
 import "../../SharedComponents"
 import "Styles"
 
+
 Page {
-    background: Rectangle { anchors.fill: parent; color: "#2E2F30"}
-    anchors.fill: parent
+    background: Rectangle { color: "#2E2F30"}
 
     Container {
         Title { text: qsTr("Log In") }
@@ -23,23 +23,19 @@ Page {
                 echoMode: TextInput.Password
             }
 
-            Button {
-
-                Layout.fillWidth: true
-                padding: 16
-                font.pointSize: 16
+            FormButton {
                 text: qsTr("Log In")
+                backgroundColor: "#ff9000"
+                backgroundHoverColor: "#FFA100"
+                Layout.fillWidth: true
+            }
 
-                background: Rectangle {
-                    radius: 6
-                    color: "#ff9000"
-                }
+            FormButton {
+                text: qsTr("Register")
+                textColor: "#ff9000"
+                backgroundHoverBorderColor: "#ff9000"
+                Layout.fillWidth: true
 
-                MouseArea {
-                    hoverEnabled: true
-                    anchors.fill: parent
-                    cursorShape: containsMouse ? Qt.PointingHandCursor : Qt.ArrowCursor
-                }
             }
         }
     }
