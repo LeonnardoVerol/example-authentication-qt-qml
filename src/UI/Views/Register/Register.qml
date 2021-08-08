@@ -39,6 +39,8 @@ Page {
                 backgroundColor: "#ff9000"
                 backgroundHoverColor: "#FFA100"
                 Layout.fillWidth: true
+
+                onClicked: parent.validate()
             }
 
             FormButton {

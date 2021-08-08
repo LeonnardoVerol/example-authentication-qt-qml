@@ -4,6 +4,8 @@ import QtQuick.Layouts 1.12
 
 ColumnLayout {
     // Shortcuts
+    property alias required: textField.required
+    property alias isValid: textField.isValid
     property alias placeholderText: textField.placeholderText
     property alias echoMode: textField.echoMode
 
@@ -29,14 +31,43 @@ ColumnLayout {
         font.pointSize: 16
         color: "#f4ede8"
 
+        property bool isValid: true
+        property bool required: true
         property color backgroundColor: "#181A1B"
         property color backgroundActiveBorderColor: "#ff9000"
+
+        function validate()
+        {
+            if(focus)
+            {
+                isValid = true;
+                return;
+            }
+
+            if(required === false)
+            {
+                isValid = true;
+                return;
+            }
+
+            if (text.trim().length !== 0)
+            {
+                isValid = true;
+                return;
+            }
+
+            isValid = false;
+        }
 
         background: Rectangle {
             radius: 6
             color: textField.backgroundColor
-            border.width: textField.focus ? 1 : 0
-            border.color: textField.backgroundActiveBorderColor
+            border.width: (textField.focus || textField.isValid === false ) ? 1 : 0
+            border.color: textField.isValid === false ? "red" : textField.backgroundActiveBorderColor
+        }
+
+        onFocusChanged: {
+            textField.validate()
         }
     }
 }
