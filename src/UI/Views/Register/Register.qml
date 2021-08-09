@@ -2,6 +2,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import Store.Navigation 1.0
+import Store.Authentication 1.0
+
 import "../../SharedComponents"
 import "Styles"
 
@@ -13,23 +15,20 @@ Page {
 
         Form {
             Input {
+                id: name
                 label.text: qsTr("Name")
                 placeholderText: qsTr("Name")
             }
 
             Input {
+                id: username
                 label.text: qsTr("Username")
                 placeholderText: qsTr("Username")
             }
 
             Input {
+                id: password
                 label.text: qsTr("Password")
-                placeholderText: qsTr("Password")
-                echoMode: TextInput.Password
-            }
-
-            Input {
-                label.text: qsTr("Confirm Password")
                 placeholderText: qsTr("Password")
                 echoMode: TextInput.Password
             }
@@ -40,7 +39,16 @@ Page {
                 backgroundHoverColor: "#FFA100"
                 Layout.fillWidth: true
 
-                onClicked: parent.validate()
+                onClicked: {
+                    if(parent.isValid())
+                    {
+                        Authentication.register({
+                                                    name: name.input.text,
+                                                    username: username.input.text,
+                                                    password: password.input.text
+                                                })
+                    }
+                }
             }
 
             FormButton {

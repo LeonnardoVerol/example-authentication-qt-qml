@@ -14,5 +14,7 @@
         <file>UI/Views/Register/Styles/Container.qml</file>
         <file>UI/Views/Register/Styles/Title.qml</file>
         <file>UI/Navigation/Store/NavigationStore.qml</file>
+        <file>UI/Authentication/Store/AuthenticationStore.qml</file>
+        <file>UI/Authentication/Store/Types.js</file>
     </qresource>
 </RCC>

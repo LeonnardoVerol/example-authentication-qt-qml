@@ -2,10 +2,10 @@ import QtQuick 2.15
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import Store.Navigation 1.0
+import Store.Authentication 1.0
 
 import "../../SharedComponents"
 import "Styles"
-
 
 Page {
     background: Rectangle { color: "#2E2F30"}

@@ -6,20 +6,17 @@ ColumnLayout {
     Layout.fillWidth: true
     spacing: 30
 
-    property var validate: (function()
+    property var isValid: (function()
     {
+        let valid;
         for(let index = 0; index < children.length; index++)
         {
             if(children[index] instanceof Input)
             {
                 children[index].input.validate();
+                valid = children[index].isValid
             }
         }
-    })
-
-
-    property var submit: (function()
-    {
-        validate();
+        return valid;
     })
 }

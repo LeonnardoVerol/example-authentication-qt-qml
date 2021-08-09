@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
     }, Qt::QueuedConnection);
 
     qmlRegisterSingletonType(QUrl("qrc:/UI/Navigation/Store/NavigationStore.qml"), "Store.Navigation", 1, 0, "Navigation");
+    qmlRegisterSingletonType(QUrl("qrc:/UI/Authentication/Store/AuthenticationStore.qml"), "Store.Authentication", 1, 0, "Authentication");
 
     engine.load(url);
 
