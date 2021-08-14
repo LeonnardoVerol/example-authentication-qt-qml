@@ -3,6 +3,7 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import Store.Navigation 1.0
 import Store.Authentication 1.0
+import Store.Toast 1.0
 
 import "../../SharedComponents"
 import "Styles"
@@ -33,20 +34,38 @@ Page {
                 echoMode: TextInput.Password
             }
 
+            InputError {
+                id: inputError
+            }
+
             FormButton {
+                id: register
                 text: qsTr("Register")
                 backgroundColor: "#ff9000"
                 backgroundHoverColor: "#FFA100"
                 Layout.fillWidth: true
 
                 onClicked: {
-                    if(parent.isValid())
+                    inputError.text = "";
+
+                    if(parent.isValid() === false)
                     {
+                        inputError.text = "All Fields are Required";
+                        return;
+                    }
+
+                    try {
                         Authentication.register({
                                                     name: name.input.text,
                                                     username: username.input.text,
                                                     password: password.input.text
                                                 })
+
+                        Toast.success("Account Created!");
+                        Navigation.goBack();
+                    }
+                    catch(error) {
+                        inputError.text = error.errorMessage
                     }
                 }
             }

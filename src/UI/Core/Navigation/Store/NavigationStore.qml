@@ -1,22 +1,23 @@
 import QtQuick 2.15
+import "Types.js" as Types
 
 pragma Singleton
 Item {
     signal pushSignal(string url)
     signal popSignal();
 
-    property string initialPage: "Login Screen"
+    property string initialPage: Types.LOGIN_SCREEN
     readonly property var routes: [
         {
-            name: "Login Screen",
+            name: Types.LOGIN_SCREEN,
             path: "qrc:/UI/Views/Login/Login.qml"
         },
         {
-            name: "Register Screen",
+            name: Types.REGISTER_SCREEN,
             path: "qrc:/UI/Views/Register/Register.qml"
         },
         {
-            name: "Home Screen",
+            name: Types.HOME_SCREEN,
             path: "qrc:/UI/Views/Home/Home.qml"
         }
     ]

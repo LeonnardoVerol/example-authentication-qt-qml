@@ -1,5 +1,4 @@
 import QtQuick 2.15
-import "../../Utils"
 import "Types.js" as Types
 
 pragma Singleton
@@ -10,7 +9,7 @@ Item {
     property string status: ""
     property string errorMessage: ""
 
-    property var commit: (function(state, payload = {}) {
+    property var commit: (function(state, payload = undefined) {
         const mutations = {
             [Types.REGISTER_REQUEST]: function (payload) {
                 status = "Fake API Request"
@@ -36,9 +35,10 @@ Item {
     {
         commit(Types.REGISTER_REQUEST);
 
-        if(fakeDatabase.find(user => user.name === payload.name))
+        if(fakeDatabase.find(user => user.username === payload.username))
         {
-            commit(Types.REGISTER_ERROR, "User Already Exists!");
+            commit(Types.REGISTER_ERROR, "Username Already Exists!");
+            throw { status, errorMessage };
         }
         else
         {

@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
-import "Navigation"
+import "Core/Navigation"
+import "Core/Toast"
 
 Window {
     minimumWidth: 1024
@@ -13,4 +14,6 @@ Window {
     title: qsTr("Example Authentication in QT / QML")
 
     Navigation {}
+
+    ToastManager {}
 }

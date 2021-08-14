@@ -6,15 +6,21 @@
         <file>UI/Views/Login/Styles/Container.qml</file>
         <file>UI/Views/Login/Styles/Title.qml</file>
         <file>UI/Views/Home/Home.qml</file>
-        <file>UI/Navigation/Navigation.qml</file>
+        <file>UI/Core/Navigation/Navigation.qml</file>
         <file>UI/SharedComponents/Input.qml</file>
         <file>UI/SharedComponents/FormButton.qml</file>
         <file>UI/Views/Register/Register.qml</file>
         <file>UI/Views/Register/Styles/Form.qml</file>
         <file>UI/Views/Register/Styles/Container.qml</file>
         <file>UI/Views/Register/Styles/Title.qml</file>
-        <file>UI/Navigation/Store/NavigationStore.qml</file>
-        <file>UI/Authentication/Store/AuthenticationStore.qml</file>
-        <file>UI/Authentication/Store/Types.js</file>
+        <file>UI/Core/Navigation/Store/NavigationStore.qml</file>
+        <file>UI/SharedComponents/InputError.qml</file>
+        <file>UI/Core/Toast/ToastManager.qml</file>
+        <file>UI/Core/Authentication/Store/AuthenticationStore.qml</file>
+        <file>UI/Core/Authentication/Store/Types.js</file>
+        <file>UI/Core/Toast/Store/ToastStore.qml</file>
+        <file>UI/Core/Toast/Components/ToastItem.qml</file>
+        <file>UI/Core/Toast/Store/Types.js</file>
+        <file>UI/Core/Navigation/Store/Types.js</file>
     </qresource>
 </RCC>

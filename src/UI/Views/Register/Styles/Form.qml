@@ -8,15 +8,16 @@ ColumnLayout {
 
     property var isValid: (function()
     {
-        let valid;
+        const valid = [];
         for(let index = 0; index < children.length; index++)
         {
             if(children[index] instanceof Input)
             {
                 children[index].input.validate();
-                valid = children[index].isValid
+                valid.push(children[index].isValid)
             }
         }
-        return valid;
+
+        return valid.every(element => element === true);
     })
 }

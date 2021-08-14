@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.12
 import Store.Navigation 1.0
 import Store.Authentication 1.0
 
+import "../../Core/Navigation/Store/Types.js" as ScreenTypes
 import "../../SharedComponents"
 import "Styles"
 
@@ -38,7 +39,7 @@ Page {
                 backgroundHoverBorderColor: "#ff9000"
                 Layout.fillWidth: true
 
-                onClicked: Navigation.push("Register Screen")
+                onClicked: Navigation.push(ScreenTypes.REGISTER_SCREEN)
             }
         }
     }
