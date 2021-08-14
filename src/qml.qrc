@@ -2,7 +2,6 @@
     <qresource prefix="/">
         <file>UI/Main.qml</file>
         <file>UI/Views/Login/Login.qml</file>
-        <file>UI/Views/Login/Styles/Form.qml</file>
         <file>UI/Views/Login/Styles/Container.qml</file>
         <file>UI/Views/Login/Styles/Title.qml</file>
         <file>UI/Views/Home/Home.qml</file>
@@ -10,7 +9,6 @@
         <file>UI/SharedComponents/Input.qml</file>
         <file>UI/SharedComponents/FormButton.qml</file>
         <file>UI/Views/Register/Register.qml</file>
-        <file>UI/Views/Register/Styles/Form.qml</file>
         <file>UI/Views/Register/Styles/Container.qml</file>
         <file>UI/Views/Register/Styles/Title.qml</file>
         <file>UI/Core/Navigation/Store/NavigationStore.qml</file>
@@ -22,5 +20,7 @@
         <file>UI/Core/Toast/Components/ToastItem.qml</file>
         <file>UI/Core/Toast/Store/Types.js</file>
         <file>UI/Core/Navigation/Store/Types.js</file>
+        <file>UI/SharedComponents/Form.qml</file>
+        <file>UI/Core/NavBar/NavBar.qml</file>
     </qresource>
 </RCC>

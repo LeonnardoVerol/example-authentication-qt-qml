@@ -1,15 +1,19 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.12
-import QtQuick.Layouts 1.12
+
+import "../../Core/NavBar"
 
 Page {
-    background: Rectangle { anchors.fill: parent; color: "#2E2F30"}
-    anchors.fill: parent
+    background: Rectangle { color: "#2E2F30"}
+
+    NavBar {}
+
 
     Text {
-        id: name
-        text: qsTr("Home")
+        text: qsTr("Home Screen")
         anchors.centerIn: parent
+        font.pointSize: 20
+        color: "#CBCBCB"
     }
 
 }

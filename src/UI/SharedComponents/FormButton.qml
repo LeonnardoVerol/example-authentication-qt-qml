@@ -7,6 +7,7 @@ Button {
     padding: 16
     font.pointSize: 16
 
+    property int radius: 6
     property color textColor: "black"
     property color backgroundColor: "transparent"
     property color backgroundHoverColor: "transparent"
@@ -22,7 +23,7 @@ Button {
     }
 
     background: Rectangle {
-        radius: 6
+        radius: control.radius
         color: control.hovered ? control.backgroundHoverColor : control.backgroundColor
         border.width: control.hovered ? 1 : 0
         border.color: control.backgroundHoverBorderColor

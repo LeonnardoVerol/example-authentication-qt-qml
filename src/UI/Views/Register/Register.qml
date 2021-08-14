@@ -39,7 +39,7 @@ Page {
             }
 
             FormButton {
-                id: register
+                id: submit
                 text: qsTr("Register")
                 backgroundColor: "#ff9000"
                 backgroundHoverColor: "#FFA100"
@@ -50,7 +50,9 @@ Page {
 
                     if(parent.isValid() === false)
                     {
-                        inputError.text = "All Fields are Required";
+                        const msg = "All Fields are Required"
+                        inputError.text = msg;
+                        Toast.error(msg);
                         return;
                     }
 
@@ -62,10 +64,12 @@ Page {
                                                 })
 
                         Toast.success("Account Created!");
+                        parent.reset()
                         Navigation.goBack();
                     }
                     catch(error) {
                         inputError.text = error.errorMessage
+                        Toast.error(error.errorMessage);
                     }
                 }
             }

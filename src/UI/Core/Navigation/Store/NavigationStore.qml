@@ -1,39 +1,52 @@
 import QtQuick 2.15
-import "Types.js" as Types
+import "Types.js" as ScreenTypes
 
 pragma Singleton
 Item {
     signal pushSignal(string url)
     signal popSignal();
 
-    property string initialPage: Types.LOGIN_SCREEN
+    property var breadcrumbs: [initialPage]
+
+    property string initialPage: ScreenTypes.LOGIN_SCREEN
+
     readonly property var routes: [
         {
-            name: Types.LOGIN_SCREEN,
-            path: "qrc:/UI/Views/Login/Login.qml"
+            id: ScreenTypes.LOGIN_SCREEN,
+            name: "Login",
+            path: "qrc:/UI/Views/Login/Login.qml",
         },
         {
-            name: Types.REGISTER_SCREEN,
-            path: "qrc:/UI/Views/Register/Register.qml"
+            id: ScreenTypes.REGISTER_SCREEN,
+            name: "Register",
+            path: "qrc:/UI/Views/Register/Register.qml",
         },
         {
-            name: Types.HOME_SCREEN,
-            path: "qrc:/UI/Views/Home/Home.qml"
+            id: ScreenTypes.HOME_SCREEN,
+            name: "Home",
+            path: "qrc:/UI/Views/Home/Home.qml",
         }
     ]
 
-    function router(name)
+    function getActiveScreenName()
     {
-        return routes.find(element => element.name === name).path
+        return routes.find(element => element.id === breadcrumbs[breadcrumbs.length-1]).name
     }
 
-    function push(name)
+    function router(id)
     {
-        pushSignal(router(name))
+        return routes.find(element => element.id === id).path
+    }
+
+    function push(id)
+    {
+        breadcrumbs.push(id)
+        pushSignal(router(id))
     }
 
     function goBack()
     {
+        breadcrumbs.pop()
         popSignal();
     }
 
