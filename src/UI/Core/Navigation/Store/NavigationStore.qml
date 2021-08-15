@@ -4,7 +4,7 @@ import "Types.js" as ScreenTypes
 pragma Singleton
 Item {
     signal pushSignal(string url)
-    signal popSignal();
+    signal popSignal(string url);
 
     property var breadcrumbs: [initialPage]
 
@@ -46,8 +46,16 @@ Item {
 
     function goBack()
     {
-        breadcrumbs.pop()
-        popSignal();
+        breadcrumbs.pop();
+
+        if(breadcrumbs.length === 0)
+        {
+            popSignal(router(initialPage));
+        }
+        else
+        {
+            popSignal(router(breadcrumbs[breadcrumbs.length-1]));
+        }
     }
 
     function pop()

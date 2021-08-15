@@ -13,15 +13,12 @@ StackView {
 
         function onPushSignal(url)
         {
-            stackView.push(url);
+            stackView.replace(url, StackView.PushTransition);
         }
 
-        function onPopSignal()
+        function onPopSignal(url)
         {
-            if(depth !== 1)
-            {
-                stackView.pop();
-            }
+            stackView.replace(url, StackView.PopTransition);
         }
     }
 }

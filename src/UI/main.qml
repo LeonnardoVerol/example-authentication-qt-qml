@@ -4,8 +4,8 @@ import "Core/Navigation"
 import "Core/Toast"
 
 Window {
-    minimumWidth: 1024
-    width: 1024
+    minimumWidth: 450
+    width: 450
     minimumHeight: 768
     height: 768
     color: "#2E2F30"
