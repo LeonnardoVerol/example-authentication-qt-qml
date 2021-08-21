@@ -5,6 +5,7 @@
 //
 
 import QtQuick 2.15
+import Styles.Colors 1.0
 import "../Store/Types.js" as Types
 
 Item {
@@ -35,12 +36,12 @@ Item {
             name: Types.TOAST_ERROR
             PropertyChanges {
                 target: container
-                color: "#F8D7DA"
+                color: Colors.toast.error.background
 
             }
             PropertyChanges {
                 target: message
-                color: "#842029"
+                color: Colors.toast.error.text
 
             }
         },
@@ -48,12 +49,12 @@ Item {
             name: Types.TOAST_SUCCESS
             PropertyChanges {
                 target: container
-                color: "#D1E7DD"
+                color: Colors.toast.success.background
 
             }
             PropertyChanges {
                 target: message
-                color: "#0f5132"
+                color: Colors.toast.success.text
 
             }
         }

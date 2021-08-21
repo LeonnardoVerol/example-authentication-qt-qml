@@ -22,5 +22,6 @@
         <file>UI/Core/Navigation/Store/Types.js</file>
         <file>UI/SharedComponents/Form.qml</file>
         <file>UI/Core/NavBar/NavBar.qml</file>
+        <file>UI/Styles/Colors.qml</file>
     </qresource>
 </RCC>
