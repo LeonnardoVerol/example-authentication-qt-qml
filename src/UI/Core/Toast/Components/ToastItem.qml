@@ -13,8 +13,11 @@ Item {
     readonly property real fadeTime: 300
     readonly property real aliveTime: 3000
 
-    implicitHeight: message.implicitHeight
-    implicitWidth: message.implicitWidth
+    anchors.right: (parent != null) ? parent.right : undefined
+
+    height: message.height
+    width: message.width
+
 
     signal selfDestroy(int index);
 
