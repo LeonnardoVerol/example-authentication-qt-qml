@@ -20,5 +20,5 @@ This code was also used at the TDC (The Developers Conference) 2021 presentation
 PS: [Components Example in Qt / QML](https://github.com/LeonnardoVerol/example-components-qt-qml) was also part of the presentation.
 
 Slides:
-* [PT-BR](docs/2021_EN_TDC_Applying-Architecture-Patterns-in-Qt_QML.pdf)
-* [EN](docs/2021_PT-BR_TDC_Aplicando-Padroes-de-Arquitetura-em-Qt_QML.pdf)
+* [PT-BR](docs/2021_PT-BR_TDC_Aplicando-Padroes-de-Arquitetura-em-Qt_QML.pdf)
+* [EN](docs/2021_EN_TDC_Applying-Architecture-Patterns-in-Qt_QML.pdf)
