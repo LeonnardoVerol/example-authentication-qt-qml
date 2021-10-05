@@ -22,3 +22,7 @@ PS: [Components Example in Qt / QML](https://github.com/LeonnardoVerol/example-c
 Slides:
 * [PT-BR](docs/2021_PT-BR_TDC_Aplicando-Padroes-de-Arquitetura-em-Qt_QML.pdf)
 * [EN](docs/2021_EN_TDC_Applying-Architecture-Patterns-in-Qt_QML.pdf)
+
+## TODO
+
+Verify [QML Modules in Qt 6.2](https://www.qt.io/blog/qml-modules-in-qt-6.2)
